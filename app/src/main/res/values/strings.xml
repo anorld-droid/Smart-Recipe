@@ -24,5 +24,8 @@
     <string name="about_text">Smart Recipe is a food-focused mobile application with hundreds of easy and tasty recipes.\nAll recipes use simple ingredients that are easily available and inexpensive.\nIf you are interested in learning how to cook healthy and yet simple recipes you\'re in the right place.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="share">Share</string>
+    <string name="waiting_for_network">Waiting for network connection.</string>
+    <string name="text_home">What are you gonna cook today?</string>
+    <string name="sub_text_home">Search for healthy recipes.</string>
 
 </resources>
