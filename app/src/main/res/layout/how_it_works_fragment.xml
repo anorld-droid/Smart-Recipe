@@ -1,13 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.howItWorks.HowItWorks">
+    android:fillViewport="true"
+    tools:context=".ui.about.About">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/aboutImage"
+        android:layout_width="100dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/menuText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/menu_text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/aboutImage"
+        app:layout_constraintTop_toTopOf="@+id/aboutImage" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/menusubText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/menu_subtext"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/aboutImage"
+        app:layout_constraintTop_toBottomOf="@+id/menuText" />
+
+    <ImageView
+        android:id="@+id/search_image"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutImage"
+        app:srcCompat="@drawable/search" />
+
+    <TextView
+        android:id="@+id/search_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/menu_text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/search_image"
+        app:layout_constraintTop_toTopOf="@+id/search_image" />
+
+    <TextView
+        android:id="@+id/search_sub_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/menu_subtext"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_image"
+        app:layout_constraintTop_toBottomOf="@+id/search_text" />
+
+    <ImageView
+        android:id="@+id/pick_image"
+        android:layout_width="100dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_image"
+        app:srcCompat="@drawable/pick" />
+
+    <TextView
+        android:id="@+id/pick_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/pick_text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pick_image"
+        app:layout_constraintTop_toTopOf="@+id/pick_image" />
+
+    <TextView
+        android:id="@+id/pick_sub_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/pick_subtext"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pick_image"
+        app:layout_constraintTop_toBottomOf="@+id/pick_text" />
+
+    <ImageView
+        android:id="@+id/learn_image"
+        android:layout_width="100dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pick_image"
+        app:srcCompat="@drawable/learn" />
+
+    <TextView
+        android:id="@+id/learn_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/learn_text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/learn_image"
+        app:layout_constraintTop_toTopOf="@+id/learn_image" />
+
+    <TextView
+        android:id="@+id/learn_sub_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/learn_subtext"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/learn_image"
+        app:layout_constraintTop_toBottomOf="@+id/learn_text" />
+
+    <ImageView
+        android:id="@+id/share_image"
+        android:layout_width="100dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learn_image"
+        app:srcCompat="@drawable/share_recipe" />
+
+    <TextView
+        android:id="@+id/share_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/share_text"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/share_image"
+        app:layout_constraintTop_toTopOf="@+id/share_image" />
+
+    <TextView
+        android:id="@+id/share_sub_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/share_subtext"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/share_image"
+        app:layout_constraintTop_toBottomOf="@+id/share_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
