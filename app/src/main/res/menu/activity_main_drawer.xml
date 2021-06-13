@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_foreground"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_categories_foreground"
+            android:title="@string/menu_categories" />
+
+        <item
+            android:id="@+id/nav_recipe"
+            android:icon="@drawable/ic_recipe_foreground"
+            android:title="@string/menu_recipe" />
+
+        <item
+            android:id="@+id/nav_subscription"
+            android:icon="@drawable/ic_subscription_foreground"
+            android:title="@string/menu_subscription" />
+
+        <item
+            android:id="@+id/nav_memberships"
+            android:icon="@drawable/ic_membership_foreground"
+            android:title="@string/menu_memberships" />
+        <item
+            android:id="@+id/nav_how_it_works"
+            android:icon="@drawable/ic_how_it_works_foreground"
+            android:title="@string/menu_how_it_works" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about_foreground"
+            android:title="@string/menu_about" />
+
+
+    </group>
+</menu>

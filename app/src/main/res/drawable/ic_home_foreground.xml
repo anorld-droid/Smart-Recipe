@@ -1,0 +1,13 @@
+<!-- drawable/home_outline.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <group android:scaleX="5.085"
+      android:scaleY="5.085"
+      android:translateX="-7.02"
+      android:translateY="-7.02">
+      <path android:fillColor="#000" android:pathData="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69M12 3L2 12H5V20H11V14H13V20H19V12H22L12 3Z" />
+  </group>
+</vector>
