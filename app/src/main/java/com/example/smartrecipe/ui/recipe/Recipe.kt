@@ -10,12 +10,13 @@ import androidx.core.app.ShareCompat
 import androidx.lifecycle.Observer
 import com.example.smartrecipe.R
 import com.example.smartrecipe.databinding.FragmentHomeBinding
+import com.example.smartrecipe.databinding.FragmentRecipeBinding
 import com.example.smartrecipe.ui.categories.CategoriesViewModel
 
 class Recipe : Fragment() {
 
     private lateinit var viewModel: RecipeViewModel
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentRecipeBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -29,7 +30,7 @@ class Recipe : Fragment() {
         viewModel =
             ViewModelProvider(this).get(RecipeViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentRecipeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
@@ -47,24 +48,6 @@ class Recipe : Fragment() {
 //            menu?.findItem(R.id.share)?.setVisible(false)
 ////        }
     }
-
-//    private fun getShareIntent(): Intent {
-//        val args = GameWonFragmentArgs.fromBundle(requireArguments())
-//        return ShareCompat.IntentBuilder.from(requireActivity())
-//            .setText(getString(R.string.share_success_text, args.numCorrect, args.numQuestions))
-//            .setType("text/plain")
-//            .intent
-//    }
-//    private fun shareSuccess() {
-//        startActivity(getShareIntent())
-//    }
-
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when(item!!.itemId){
-//            R.id.share -> shareSuccess()
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }t
 
     override fun onDestroyView() {
         super.onDestroyView()

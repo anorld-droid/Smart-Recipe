@@ -10,13 +10,14 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import com.example.smartrecipe.R
 import com.example.smartrecipe.databinding.FragmentHomeBinding
+import com.example.smartrecipe.databinding.FragmentSubscriptionBinding
 import com.example.smartrecipe.ui.categories.CategoriesViewModel
 
 class Subscription : Fragment() {
 
 
     private lateinit var viewModel: SubscriptionViewModel
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentSubscriptionBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -31,7 +32,7 @@ class Subscription : Fragment() {
         viewModel =
             ViewModelProvider(this).get(SubscriptionViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentSubscriptionBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
