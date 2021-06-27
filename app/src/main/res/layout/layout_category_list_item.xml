@@ -24,8 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/recipe_20sp_text_size"
-            android:fontFamily="sans-serif-condensed-light"
-            android:textColor="#000"
+            android:fontFamily="@font/adamina"
             android:layout_marginStart="20dp"
             android:id="@+id/category_title"/>
 
