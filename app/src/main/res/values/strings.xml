@@ -20,12 +20,31 @@
     <string name="pick_subtext">Visualize a beautiful way to prepare your food.</string>
     <string name="learn_text">Learn.</string>
     <string name="share_text">Share.</string>
-    <string name="share_subtext">Share the recipe with your friends and family.</string><string name="learn_subtext">Each recipe includes nutritional information so you can always make healthy choice .</string>
+    <string name="share_subtext">Share the recipe with your friends and family.</string>
+    <string name="learn_subtext">Each recipe includes nutritional information so you can always make healthy choice .</string>
     <string name="about_text">Smart Recipe is a food-focused mobile application with hundreds of easy and tasty recipes.\nAll recipes use simple ingredients that are easily available and inexpensive.\nIf you are interested in learning how to cook healthy and yet simple recipes you\'re in the right place.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="share">Share</string>
-    <string name="waiting_for_network">Waiting for network connection.</string>
-    <string name="text_home">What are you gonna cook today?</string>
-    <string name="sub_text_home">Search for healthy recipes.</string>
-
+    <string name="text_home">Welcome to smart recipes where cooking is made simple.</string>
+    <string name="sub_text_home">Find  2000+ healthy recipes in the categories section.\n\tEnjoy!!</string>
+    <string name="show_breakfast">Breakfast</string>
+    <string name="show_lunch">Lunch</string>
+    <string name="show_dinner">Dinner</string>
+    <string name="show_snack">Snack</string>
+    <string name="show_tea_time">Tea Time</string>
+    <string name="floatImageBtn">Navigate to Categories section</string>
+    <string name="food_image">Food Image</string>
+    <string name="network_status">Showing network status</string>
+    <string name="label">%s</string>
+    <string name="ingredient_lines">%s</string>
+    <string name="health_labels">%s</string>
+    <string name="directions">%s</string>
+    <string name="menu_categories_label">Categories</string>
+    <string name="layout_search_exhausted_no_more_results">No more results…</string>
+    <string name="layout_recipe_calories_label">Calories</string>
+    <string name="recipe_activity_calories_serving_label">Calories/Serving</string>
+    <string name="recipe_activity_servings_label">Servings</string>
+    <string name="recipe_activity_diet_labels">Diet Labels</string>
+    <string name="recipe_activity_health_labels">Health Labels</string>
+    <string name="recipe_activity_cautions">Cautions</string>
 </resources>

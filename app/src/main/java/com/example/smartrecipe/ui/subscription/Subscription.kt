@@ -1,17 +1,14 @@
 package com.example.smartrecipe.ui.subscription
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.example.smartrecipe.R
-import com.example.smartrecipe.databinding.FragmentHomeBinding
+import androidx.lifecycle.ViewModelProvider
 import com.example.smartrecipe.databinding.FragmentSubscriptionBinding
-import com.example.smartrecipe.ui.categories.CategoriesViewModel
 
 class Subscription : Fragment() {
 

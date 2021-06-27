@@ -9,30 +9,20 @@
         android:id="@+id/nav_home"
         android:name="com.example.smartrecipe.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/nav_categories"
-        android:name="com.example.smartrecipe.ui.categories.Categories"
-        android:label="@string/menu_categories"
-        tools:layout="@layout/fragment_categories" />
-    <fragment
-        android:id="@+id/nav_recipe"
-        android:name="com.example.smartrecipe.ui.recipe.Recipe"
-        android:label="@string/menu_recipe"
-        tools:layout="@layout/fragment_categories" />
+        tools:layout="@layout/fragment_home" >
+
+
+        <action
+            android:id="@+id/action_nav_home_to_recipeListActivity"
+            app:destination="@id/nav_categories" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/nav_subscription"
         android:name="com.example.smartrecipe.ui.subscription.Subscription"
         android:label="@string/menu_subscription"
         tools:layout="@layout/fragment_subscription" />
-
-
-    <fragment
-        android:id="@+id/nav_memberships"
-        android:name="com.example.smartrecipe.ui.membership.Membership"
-        android:label="@string/menu_memberships"
-        tools:layout="@layout/membership_fragment"/>
 
         <fragment
         android:id="@+id/nav_how_it_works"
@@ -44,4 +34,10 @@
         android:name="com.example.smartrecipe.ui.about.About"
         android:label="@string/menu_about"
         tools:layout="@layout/about_fragment" />
+    <activity
+        android:id="@+id/nav_categories"
+        android:name="com.example.smartrecipe.RecipeListActivity"
+        android:label="activity_recipe_list"
+        tools:layout="@layout/activity_recipe_list" />
+
 </navigation>

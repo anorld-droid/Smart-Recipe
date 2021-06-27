@@ -8,5 +8,10 @@
     <dimen name="nav_header_height">200dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="image_header_height">192dp</dimen>
-    <dimen name="spacing_normal">8</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="recipe_image_height">250dp</dimen>
+    <dimen name="recipe_20sp_text_size">20sp</dimen>
+    <dimen name="recipe_16sp_text_size">16sp</dimen>
+    <dimen name="recipe_15sp_text_size">15sp</dimen>
+    <dimen name="recycler_loading_view_height">80dp</dimen>
 </resources>
