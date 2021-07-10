@@ -2,6 +2,7 @@ package com.example.smartrecipe
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -36,15 +37,15 @@ open class MainActivity : AppCompatActivity() {
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        var navigation: Int
+
         if (notifyList()) {
-           navigation = R.id.nav_categories
+            hideCategories(true)
         }else{
-           navigation = R.id.nav_subscription
+            hideCategories(false)
         }
         appBarConfiguration = AppBarConfiguration(
              setOf(
-                R.id.nav_home, navigation, R.id.nav_subscription,
+                R.id.nav_home, R.id.nav_categories, R.id.nav_subscription,
                 R.id.nav_how_it_works, R.id.nav_about
             ), drawerLayout
         )
@@ -69,6 +70,11 @@ open class MainActivity : AppCompatActivity() {
         return preferenceObject.getBoolean(PURCHASE_KEY, false)
     }
 
+    private fun hideCategories (visibility : Boolean){
+        val navigationView : NavigationView = findViewById(R.id.nav_view)
+        var navMenu :  Menu = navigationView.menu
+        navMenu.findItem(R.id.nav_categories).isVisible = visibility
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
