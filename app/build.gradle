@@ -77,6 +77,8 @@ dependencies {
     // CircleImageView
     implementation "de.hdodenhof:circleimageview:$circleImageViewVersion"
 
+    //billingclient
+    implementation 'com.android.billingclient:billing:3.0.1'
     // Lifecycle
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
 

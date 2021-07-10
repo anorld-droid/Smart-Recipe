@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.smartrecipe.ui.subscription.SubscriptionActivity"
+            android:label="@string/subscription"
+            android:theme="@style/Theme.SmartRecipe"/>
         <activity android:name=".RecipeListActivity"
             android:theme="@style/Theme.SmartRecipe.NoActionBar"/>
         <activity android:name=".RecipeActivity"

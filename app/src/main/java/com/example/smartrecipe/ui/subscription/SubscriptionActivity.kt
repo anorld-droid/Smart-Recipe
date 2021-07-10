@@ -4,7 +4,7 @@
 * This code implements google multiple consumable in app subscriptions
 * using google billing client library
  */
-package com.example.smartrecipe.subscription;
+package com.example.smartrecipe.ui.subscription;
 
 
 //imports
@@ -27,13 +27,13 @@ class SubscriptionActivity : AppCompatActivity(), PurchasesUpdatedListener {
     var listView: ListView? = null
     var access_home_btn: ImageView? = null
     private var billingClient: BillingClient? = null
-    ////
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.subscription_activity)
         listView = findViewById<View>(R.id.listview) as ListView
-
+//        supportActionBar?.title = "Subscription"
         // Establish connection to billing client
         //check purchase status from google play store cache on every app start
         billingClient = BillingClient.newBuilder(this)
@@ -125,10 +125,10 @@ class SubscriptionActivity : AppCompatActivity(), PurchasesUpdatedListener {
         }
     }
 
-    private fun notifyList() {
+    private fun notifyList()  {
         subscribeItemDisplay.clear()
         for (p in subcribeItemIDs) {
-            if(getSubscribeItemValueFromPref(p)==true) {
+            if(getSubscribeItemValueFromPref(p)) {
                     subscribeItemDisplay.add(
                         "🔵 " + p.toUpperCase() + " Package Subscription Status " + "[✔]" + "(" + getSubscribeItemValueFromPref(
                             p
@@ -235,7 +235,7 @@ class SubscriptionActivity : AppCompatActivity(), PurchasesUpdatedListener {
                                 //if purchase is acknowledged
                                 //then saved value in preference
                                 saveSubscribeItemValueToPref(subcribeItemIDs[index], true)
-                                Toast.makeText(applicationContext, "Subscription for "+subcribeItemIDs[index] + "package  was succeful!", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(applicationContext, "Subscription for "+ subcribeItemIDs[index] + "package  was succeful!", Toast.LENGTH_SHORT).show()
                                 notifyList()
                             }
                         }
@@ -244,7 +244,7 @@ class SubscriptionActivity : AppCompatActivity(), PurchasesUpdatedListener {
                         // Grant entitlement to the user on item purchase
                         if (!getSubscribeItemValueFromPref(subcribeItemIDs[index])) {
                             saveSubscribeItemValueToPref(subcribeItemIDs[index], true)
-                            Toast.makeText(applicationContext, "Subscription for "+subcribeItemIDs[index]  + "package  was succeful!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, "Subscription for "+ subcribeItemIDs[index]  + "package  was succeful!", Toast.LENGTH_SHORT).show()
                             notifyList()
                         }
                     }
@@ -276,7 +276,11 @@ class SubscriptionActivity : AppCompatActivity(), PurchasesUpdatedListener {
             //for new play console
             //To get key go to Developer Console > Select your app > Monetize > Monetization setup
             val base64Key = "Paste the key from monetize setup here. Unique for every app"
-            Security.verifyPurchase(base64Key, signedData, signature)
+            Security.verifyPurchase(
+                base64Key,
+                signedData,
+                signature
+            )
         } catch (e: IOException) {
             false
         }
@@ -294,7 +298,7 @@ class SubscriptionActivity : AppCompatActivity(), PurchasesUpdatedListener {
 
         //note add unique product ids
         //use same id for preference key
-        private val subcribeItemIDs: ArrayList<String> = object : ArrayList<String>() { //ann array method to handle the product ids
+        val subcribeItemIDs: ArrayList<String> = object : ArrayList<String>() { //ann array method to handle the product ids
             init {
                 /*
                 *create your in-app prouct ids>go to monetize>subscriptions>create subscription

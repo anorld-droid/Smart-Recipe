@@ -29,11 +29,21 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         binding.viewModel = viewModel
 
+
         viewModel.navigateToCategories.observe(viewLifecycleOwner,
             Observer<Boolean> { shouldNavigate ->
                 if (shouldNavigate == true) {
                     val navController = binding.root.findNavController()
-                    navController.navigate(R.id.action_nav_home_to_recipeListActivity)
+                    navController.navigate(R.id.action_nav_home_to_nav_categories)
+                    viewModel.onNavigatedToCategories()
+                }
+            })
+
+        viewModel.navigateToSubscription.observe(viewLifecycleOwner,
+            Observer<Boolean> { shouldNavigate ->
+                if (shouldNavigate == true) {
+                    val navController = binding.root.findNavController()
+                    navController.navigate(R.id.action_nav_home_to_subscriptionActivity)
                     viewModel.onNavigatedToCategories()
                 }
             })

@@ -47,4 +47,5 @@
     <string name="recipe_activity_diet_labels">Diet Labels</string>
     <string name="recipe_activity_health_labels">Health Labels</string>
     <string name="recipe_activity_cautions">Cautions</string>
+    <string name="subscription">Subscription</string>
 </resources>

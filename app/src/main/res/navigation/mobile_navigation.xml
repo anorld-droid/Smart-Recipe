@@ -11,18 +11,13 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
 
-
         <action
-            android:id="@+id/action_nav_home_to_recipeListActivity"
+            android:id="@+id/action_nav_home_to_subscriptionActivity"
+            app:destination="@id/nav_subscription" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_categories"
             app:destination="@id/nav_categories" />
     </fragment>
-
-
-    <fragment
-        android:id="@+id/nav_subscription"
-        android:name="com.example.smartrecipe.ui.subscription.Subscription"
-        android:label="@string/menu_subscription"
-        tools:layout="@layout/fragment_subscription" />
 
         <fragment
         android:id="@+id/nav_how_it_works"
@@ -39,5 +34,11 @@
         android:name="com.example.smartrecipe.RecipeListActivity"
         android:label="activity_recipe_list"
         tools:layout="@layout/activity_recipe_list" />
+    <activity
+        android:id="@+id/nav_subscription"
+        android:name="com.example.smartrecipe.ui.subscription.SubscriptionActivity"
+        android:label="subscription_activity"
+        tools:layout="@layout/subscription_activity" >
+    </activity>
 
 </navigation>

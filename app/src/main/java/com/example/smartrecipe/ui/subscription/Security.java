@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.smartrecipe.subscription;
+package com.example.smartrecipe.ui.subscription;
 
 import android.text.TextUtils;
 import android.util.Base64;

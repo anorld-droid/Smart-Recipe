@@ -1,5 +1,6 @@
 package com.example.smartrecipe
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
@@ -9,9 +10,10 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.smartrecipe.databinding.ActivityMainBinding
+import com.example.smartrecipe.ui.subscription.SubscriptionActivity
 import com.google.android.material.navigation.NavigationView
 
-public open class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -34,9 +36,15 @@ public open class MainActivity : AppCompatActivity() {
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+        var navigation: Int
+        if (notifyList()) {
+           navigation = R.id.nav_categories
+        }else{
+           navigation = R.id.nav_subscription
+        }
         appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_categories,  R.id.nav_subscription,
+             setOf(
+                R.id.nav_home, navigation, R.id.nav_subscription,
                 R.id.nav_how_it_works, R.id.nav_about
             ), drawerLayout
         )
@@ -44,12 +52,22 @@ public open class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
+    private fun notifyList(): Boolean {
+        var subscribed = false;
+        for (p in SubscriptionActivity.subcribeItemIDs) {
+            if (getSubscribeItemValueFromPref(p)) {
+                subscribed = getSubscribeItemValueFromPref(p)
+                break
+            }
+        }
+        return subscribed
+    }
+    private val preferenceObject: SharedPreferences
+        get() = applicationContext.getSharedPreferences(SubscriptionActivity.PREF_FILE, 0)
 
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-////        menuInflater.inflate(R.menu.main, menu)
-//        return true
-//    }
+    private fun getSubscribeItemValueFromPref(PURCHASE_KEY: String): Boolean {
+        return preferenceObject.getBoolean(PURCHASE_KEY, false)
+    }
 
 
     override fun onSupportNavigateUp(): Boolean {
